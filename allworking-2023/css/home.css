@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;   
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+header, footer{
+    width: 100%;
+    background-color: rgb(243, 245, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.562);
+}
+footer{
+    height: 18vh;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.219);
+}
+
+.header1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+}
+
+.header1 a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo .dark-logo{
+    display: none;
+}
+
+img{
+    width: 160px;
+    height: 100%;
+}
+
+.header2{
+    width: 60%;
+    display: flex;
+}
+
+.header3{
+    display: flex;
+    justify-content: space-around;
+    width: 23%;
+}
+
+main{
+    width: 100%;
+    height: 72vh;
+    background-color: rgb(182, 185, 202);
+    display: flex;
+    align-items: center;
+}
+
+.categorias, .enviados{
+    width: 150px;
+}
+
+.hov:hover{
+    color: rgb(0, 60, 150);
+}
+
+.categorias a, .enviados a{
+    color: black;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: 0.2s;
+}
+
+.dropdown-categorias{
+    position: absolute;
+    display: none;
+    background-color: rgb(243, 245, 247) /*mesma cor do header*/;
+    margin-top: 3px;
+    box-shadow: 0px 1.5px 5px rgba(0, 0, 0, 0.418);
+    z-index: 10000;
+}
+
+.dropdown-categorias a{
+    display: block;
+    color: black;
+}
+
+.dropdown-categorias a:hover{
+    background-color: rgb(188, 199, 199);
+}
+
+
+.categorias:hover .dropdown-categorias{
+    display: block;
+}
+
+.contatos{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+i{
+    font-size: 40px;
+}
+
+.log_cad, .sair{
+    text-decoration: none;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 17px;
+    border: 2px solid rgb(0, 102, 255);
+    transition: 0.4s;
+    font-weight: 600;
+}
+
+.log_cad:hover, .sair:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 102, 255);
+    border: 2px solid rgb(0, 102, 255);
+    padding: 8px 10px;
+    border-radius: 17px;
+}
+
+.nome{
+    display: flex;
+    align-items: center;
+}
+
+/*****************************************************************/
+
+.acess{
+    position: absolute;
+}
+
+.acess i{
+    padding: 12px 12px;
+    font-size: 32px;
+}
+
+.acess-contrast, .acess-text{
+    background-color: rgb(229, 229, 229);
+    width: 55px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acess-contrast{
+    border-radius: 0px 1px 0px 0px;
+    border-bottom: 2px solid white;
+}
+
+.acess-contrast label{
+    height: 100%;
+    width: 100%;
+}
+
+.acess-text{
+    border-radius: 0px 0px 10px 0px;
+}
+
+.container-acess-text{
+    border-radius: 0px 1px 1px 0px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+}
+
+.drop-acess-text{
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-around;
+    display: none;
+}
+
+.acess-contrast:hover, .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.acess-contrast label:hover{
+    cursor: pointer;
+}
+
+.acess-text:hover{
+    border-radius: 0;
+}
+
+.container-acess-text:hover .drop-acess-text{
+    display: flex;
+}
+
+.text-size{
+    height: 60px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.P{
+    font-size: 15px;
+    font-weight: 600;
+}
+.M{
+    font-size: 22px;
+    font-weight: 600;
+}
+.G{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.text-size:hover{
+    background-color: rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active{
+    background-color: brown;
+    color: white;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active:hover{
+    background-color: brown;
+    color: white;
+}
+
+
+
+/*****************************************************************/
+
+
+.container-slider{
+    display: flex;
+    width: 100%;
+    min-height: 72vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container-images{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.slider{
+    opacity: 0;
+    transform: opacity .2s;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.685);
+}
+
+.on{
+    opacity: 1;
+}
+
+#prev-button, #next-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img, #next-button img{
+    width: 100%;
+    height: 100%;
+}
+
+#prev-button{
+    transform: rotate(180deg);
+}
+
+/* *********************** Dark Theme *************************** */
+
+.dark header, .dark footer{
+    background-color: rgba(0, 0, 0, 0.966);
+    color: white;
+}
+.dark header .header3 .log_cad, .dark header .header3 .sair{
+    background-color: brown;
+    color: white;
+    border: 2px solid brown;
+}
+.dark header .header3 .log_cad:hover, .dark header .header3 .sair:hover{
+    cursor: pointer;
+    background-color: white;
+    color: brown;
+    border: 2px solid brown;
+    padding: 8px 10px;
+    border-radius: 17px;
+}
+
+
+
+.dark header .header2 .categorias a, .dark header .header2 .enviados a{
+    color: white;
+}
+.dark header .header2 .enviados .hov:hover{
+    color:brown;
+}
+.dark header .header2 .categorias .dropdown-categorias{
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.932) /*mesma cor do header*/;
+    margin-top: 3px;
+    box-shadow: 0px 1.5px 5px rgba(0, 0, 0, 0.418);
+}
+.dark header .header2 .categorias .dropdown-categorias a{
+    display: block;
+    color: white;
+}
+.dark header .header2 .categorias .dropdown-categorias a:hover{
+    background-color: brown;
+}
+.dark header .header2 .categorias a:hover{
+    color: white;
+}
+.dark header .header2 .categorias:hover .dropdown-categorias{
+    display: block;
+}
+
+
+.dark main{
+    background-color: rgb(36, 33, 33);
+}
+
+.dark header .header1 .logo .light-logo{
+    display: none;
+}
+.dark header .header1 .logo .dark-logo{
+    display: block;
+}
+
+/* Dark Acessibilidade*/
+
+
+.dark main .acess .acess-contrast, .dark main .acess .container-acess-text .acess-text{
+    background-color: brown;
+}
+
+.dark main .acess .acess-contrast{
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.dark main .acess .acess-contrast label:hover,
+.dark main .acess .container-acess-text .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(17, 16, 16, 0.658);
+}
+
+
+
+.dark main .acess .container-acess-text{
+    background-color: brown;
+    color: white;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text{
+    background-color: brown;
+
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .text-size:hover{
+    background-color: rgba(17, 16, 16, 0.658);
+    cursor: pointer;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active{
+    background-color: white;
+    color: black;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active:hover{
+    background-color: white;
+    color: black;
+}
+
+/*********************/
+

@@ -1,0 +1,441 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(243, 245, 247);
+    font-family: sans-serif;
+    height: 160vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 245, 247);
+    height: 100%;
+}
+
+.dark-logo{
+    display: none;
+}
+
+/*****************************************************************/
+
+.acess{
+    position: absolute;
+    left: 0;
+}
+
+.acess i{
+    padding: 12px 12px;
+    font-size: 32px;
+}
+
+.acess-contrast, .acess-text{
+    background-color: rgb(229, 229, 229);
+    width: 55px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acess-contrast{
+    border-radius: 0px 1px 0px 0px;
+    border-bottom: 2px solid white;
+}
+
+.acess-contrast label{
+    height: 100%;
+    width: 100%;
+}
+
+.acess-text{
+    border-radius: 0px 0px 10px 0px;
+}
+
+.container-acess-text{
+    border-radius: 0px 1px 1px 0px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+}
+
+.drop-acess-text{
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    justify-content: space-around;
+    display: none;
+}
+
+.acess-contrast:hover, .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.acess-contrast label:hover{
+    cursor: pointer;
+}
+
+.acess-text:hover{
+    border-radius: 0;
+}
+
+.container-acess-text:hover .drop-acess-text{
+    display: flex;
+}
+
+.text-size{
+    height: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.P{
+    font-size: 15px;
+    font-weight: 600;
+}
+.M{
+    font-size: 22px;
+    font-weight: 600;
+}
+.G{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.text-size:hover{
+    background-color: rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active{
+    background-color: brown;
+    color: white;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active:hover{
+    background-color: brown;
+    color: white;
+}
+
+
+
+/*****************************************************************/
+
+main{
+    height: 150vh;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.411);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 0;
+}
+
+.form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header .title{
+    display: flex;
+    align-items: center;
+}
+
+.input-group .h5::after,
+.input-group3 .h5::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #6495ED;
+
+}
+
+.input-group, .input-group3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+
+.input-group, .input-group3{
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.input-group .h5, .input-group3 .h5{
+    margin-top: 0;
+}
+
+.h5{
+    width: 100%;
+    font-weight: 600;
+}
+
+.input-name{
+    width: 100%;
+}
+
+.input-date{
+    width: 47%;
+}
+
+.input-rua{
+    width:69%;
+}
+
+.input-num {
+    width: 26%;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.3rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.7px 0.7px 6px rgba(0, 0, 0, 0.514);
+    font-size: 16px;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #6c63ff
+}
+
+.input-box label,
+.gender-title .h6{
+    font-weight: 500;
+    color: #000000c0;
+}
+
+.gender-inputs{
+    margin-top: -10px;
+}
+
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    padding: 0 0.5rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+}
+
+.gender-input label{
+    font-weight: 500;
+    color: #000000c0;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba(39, 58, 230, 0.911);
+    color: white;
+    padding: 0.75rem;  
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.continue-button button:hover{
+    background-color: rgba(39, 58, 230, 0.788);
+}
+
+@media screen and (max-width: 1330px) {
+
+    .container{
+        width: 50%;
+    }
+
+    .form{
+         width: 80%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .container{
+        max-width: 550px;
+        min-width: 470px;
+    }
+
+    .form{
+        width: 435px;
+    }
+}
+
+
+/************* Dark Theme *****************/
+
+.dark{
+    background-color: #1B1F27;
+}
+
+.dark main .container .form form .form-header .light-logo{
+    display: none;
+}
+
+.dark main .container .form form .form-header .dark-logo{
+    display: block;
+}
+
+.dark main{
+    background-color: #1B1F27;
+}
+
+.dark .container{
+    background-color: #181920;
+    color: #CBD0F7;
+    border: 1px solid rgba(255, 255, 255, 0.158);
+}
+
+.dark .form form{
+    background-color: #181920;
+}
+
+.dark label{
+    color: white;
+}
+
+.dark input{
+    color: #CBD0F7;
+    background-color: #252A34;
+    box-shadow: none;
+}
+
+.dark main .container .form form .gender-inputs .gender-title .h6{
+    color: white;
+}
+
+.dark main .container .form form .gender-inputs .gender-group .gender-input input{
+    background-color: black;
+    color: black;
+}
+
+.dark main .container .form form .input-group .input-box input:hover,
+.dark main .container .form form .input-group3 .input-box input:hover{
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.dark main .container .form form .input-group .input-box input:focus-visible{
+    outline: none;
+}
+
+.dark main .container .form form .continue-button button{
+    background-color: rgb(0, 255, 255);
+    color: black;
+    box-shadow: 0px 0px 5px rgb(0, 255, 255);
+}
+
+.dark main .container .form form .continue-button button:hover{
+    background-color: black;
+    color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 5px rgb(0, 255, 255);
+}
+
+
+/* Dark Acessibilidade*/
+
+
+.dark main .acess .acess-contrast, .dark main .acess .container-acess-text .acess-text{
+    background-color: brown;
+}
+
+.dark main .acess .acess-contrast{
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.dark main .acess .acess-contrast label:hover,
+.dark main .acess .container-acess-text .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(17, 16, 16, 0.658);
+}
+
+
+
+.dark main .acess .container-acess-text{
+    background-color: brown;
+    color: white;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text{
+    background-color: brown;
+
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .text-size:hover{
+    background-color: rgba(17, 16, 16, 0.658);
+    cursor: pointer;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active{
+    background-color: white;
+    color: black;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active:hover{
+    background-color: white;
+    color: black;
+}
+
+/*********************/

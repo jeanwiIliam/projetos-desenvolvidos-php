@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+img{
+    display: block;
+    width: 230px;
+    height: 71px;
+}
+
+input{
+    display: block;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(202, 182, 182);
+}
+
+.login{
+    background-color: rgb(243, 245, 247);
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.479);
+}
+
+h2{
+    width: 85%;
+
+}
+
+input{
+    height: 35px;
+    width: 85%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.548);
+    outline: none;
+    font-size: 16px;
+}
+
+button{
+    color: white;
+    width: 30%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: brown;
+    box-shadow: 0px 1px 5px brown;
+    transition: 0.4s;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: brown;
+    box-shadow: 0px 1px 5px brown;
+}
+
+h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: brown;
+
+}
+
+/*******************************************/
+
+.acess{
+    position: absolute;
+    left: 0;
+}
+
+.acess i{
+    padding: 12px 12px;
+    font-size: 32px;
+}
+
+.acess-contrast, .acess-text{
+    background-color: rgb(229, 229, 229);
+    width: 55px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acess-contrast{
+    border-radius: 0px 1px 0px 0px;
+    border-bottom: 2px solid white;
+}
+
+.acess-contrast label{
+    height: 100%;
+    width: 100%;
+}
+
+.acess-text{
+    border-radius: 0px 0px 10px 0px;
+}
+
+.container-acess-text{
+    border-radius: 0px 1px 1px 0px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+}
+
+.drop-acess-text{
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-around;
+    display: none;
+}
+
+.acess-contrast:hover, .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.acess-contrast label:hover{
+    cursor: pointer;
+}
+
+.acess-text:hover{
+    border-radius: 0;
+}
+
+.container-acess-text:hover .drop-acess-text{
+    display: flex;
+}
+
+.text-size{
+    height: 60px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.P{
+    font-size: 15px;
+    font-weight: 600;
+}
+.M{
+    font-size: 22px;
+    font-weight: 600;
+}
+.G{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.text-size:hover{
+    background-color: rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active{
+    background-color: brown;
+    color: white;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active:hover{
+    background-color: brown;
+    color: white;
+}
+
+/***************** Dark Theme *********************/
+
+.dark{
+    background-color: black;
+}
+
+.dark .login{
+    background-color: rgba(0, 0, 0, 0.514);
+}
+

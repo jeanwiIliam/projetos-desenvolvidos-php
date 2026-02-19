@@ -1,0 +1,111 @@
+create database emsala;
+use emsala;
+
+create table administrador(
+	ADM_id int primary key auto_increment,
+    ADM_nome varchar (100) not null,
+    ADM_email varchar (100) unique not null,
+    ADM_senha varchar (100) not null
+);
+
+create table ambiente(
+	AMB_id int primary key auto_increment,
+    AMB_nome varchar(100) not null,
+    AMB_ADM_id int not null,
+    foreign key (AMB_ADM_id) references administrador (ADM_id) on delete cascade
+);
+
+create table professor(
+	PRO_id int primary key auto_increment,
+	PRO_nome varchar(100) not null,
+    PRO_email varchar(100) unique not null,
+    PRO_cod varchar(10) unique not null,
+    PRO_AMB_id int not null,
+    foreign key (PRO_AMB_id) references ambiente (AMB_id) on delete cascade
+);
+
+create table turma(
+	TUR_id int primary key auto_increment,
+    TUR_nome varchar(20) not null,
+    TUR_AMB_id int not null,
+    foreign key (TUR_AMB_id) references ambiente (AMB_id) on delete cascade
+);
+
+
+create table disciplinas_predefinidas (
+    DPR_id int primary key auto_increment,
+    DPR_nome varchar(30) not null
+);
+insert into disciplinas_predefinidas (DPR_nome) values 
+    ('Matemática'), ('Português'), ('História'), ('Geografia'), 
+    ('Ciências'), ('Educação Física'), ('Inglês'), ('Artes');
+
+create table disciplinas_personalizadas(
+	DPE_id int primary key auto_increment,
+    DPE_nome varchar(30) not null,
+    DPE_AMB_id int not null,
+    foreign key (DPE_AMB_id) references ambiente (AMB_id) on delete cascade
+);
+
+create table turma_professor_disciplina(
+	TPD_id int primary key auto_increment,
+    TPD_TUR_id int not null,
+    TPD_PRO_id int not null,
+    TPD_DIS_tipo ENUM('predefinida', 'personalizada') not null,
+    TPD_DIS_id int not null,
+    foreign key (TPD_TUR_id) references turma (TUR_id) on delete cascade,
+    foreign key (TPD_PRO_id) references professor (PRO_id) on delete cascade
+);
+
+create table aluno (
+    ALU_id int primary key auto_increment,
+    ALU_nome varchar(100) not null,
+    ALU_email varchar(100) unique not null, -- e-mail único para cada aluno
+    ALU_cod varchar(10) unique not null,     -- código de acesso
+    ALU_AMB_id int not null,				-- escola à qual pertence
+    ALU_TUR_id int not null,                -- turma à qual pertence
+	foreign key (ALU_AMB_id) references ambiente(AMB_id),
+    foreign key (ALU_TUR_id) references turma(TUR_id)
+);
+
+create table responsavel (
+    RES_id int auto_increment primary key,
+    RES_nome varchar(100) not null,
+    RES_email varchar(100) not null,
+    RES_cod varchar(8) not null,
+    RES_AMB_id int not null,
+    foreign key (RES_AMB_id) references ambiente(AMB_id),
+    unique (RES_email, RES_AMB_id)
+);
+
+create table aluno_responsavel (
+    ALR_id int auto_increment primary key,
+    ALR_ALU_id int not null,
+    ALR_RES_id int not null,
+    foreign key (ALR_ALU_id) references aluno(ALU_id),
+    foreign key (ALR_RES_id) references responsavel(RES_id),
+    unique (ALR_ALU_id, ALR_RES_id)
+);
+
+create table recado (
+    REC_id int auto_increment primary key,
+    REC_TPD_id int,
+    REC_PRO_id int,
+    REC_ALU_id int null, -- aluno (NULL se for recado geral)
+    REC_texto text,
+    REC_programado boolean default 0, -- 1 = sim, 0 = não
+    REC_data_envio datetime, -- data real de envio ou agendada
+    REC_tipo enum('geral', 'individual') not null,
+    foreign key (REC_TPD_id) references turma_professor_disciplina(TPD_id),
+    foreign key (REC_PRO_id) references professor(PRO_id),
+    foreign key (REC_ALU_id) references aluno(ALU_id)
+);
+
+create table recado_anexo (
+    RAN_id int auto_increment primary key,
+    RAN_REC_id int,
+    RAN_arquivo varchar(255), -- caminho do arquivo salvo
+    foreign key (RAN_REC_id) references recado(REC_id)
+);
+
+

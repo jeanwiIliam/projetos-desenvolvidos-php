@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;   
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+img{
+    display: block;
+    width: 230px;
+    height: 71px;
+}
+
+.dark-logo{
+    display: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(182, 185, 202);
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(182, 185, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form{
+    background-color: rgb(243, 245, 247);
+    height: 400px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.479);
+}
+
+h2{
+    width: 85%;
+
+}
+
+input{
+    display: block;
+    height: 35px;
+    width: 85%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.548);
+    outline: none;
+    font-size: 16px;
+}
+
+button{
+    color: white;
+    width: 85%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 82, 204);
+    box-shadow: 0px 0px 5px rgb(0, 82, 204);
+    transition: 0.4s;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 82, 204);
+    box-shadow: 0px 0px 5px rgb(0, 82, 204);
+}
+
+h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(0, 82, 204);
+}
+
+form a{
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+
+form a:hover{
+    color: rgb(44, 129, 255);
+}
+
+/*****************************************************************/
+
+.acess{
+    position: absolute;
+    left: 0;
+}
+
+.acess i{
+    padding: 12px 12px;
+    font-size: 32px;
+}
+
+.acess-contrast, .acess-text{
+    background-color: rgb(229, 229, 229);
+    width: 55px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acess-contrast{
+    border-radius: 0px 1px 0px 0px;
+    border-bottom: 2px solid white;
+}
+
+.acess-contrast label{
+    height: 100%;
+    width: 100%;
+}
+
+.acess-text{
+    border-radius: 0px 0px 10px 0px;
+}
+
+.container-acess-text{
+    border-radius: 0px 1px 1px 0px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+}
+
+.drop-acess-text{
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-around;
+    display: none;
+}
+
+.acess-contrast:hover, .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.acess-contrast label:hover{
+    cursor: pointer;
+}
+
+.acess-text:hover{
+    border-radius: 0;
+}
+
+.container-acess-text:hover .drop-acess-text{
+    display: flex;
+}
+
+.text-size{
+    height: 60px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.P{
+    font-size: 15px;
+    font-weight: 600;
+}
+.M{
+    font-size: 22px;
+    font-weight: 600;
+}
+.G{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.text-size:hover{
+    background-color: rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active{
+    background-color: brown;
+    color: white;
+    border-top: 10px solid rgb(229, 229, 229);
+    border-bottom: 10px solid rgb(229, 229, 229);
+    border-left: 3px solid rgb(229, 229, 229);
+    border-right: 3px solid rgb(229, 229, 229);
+}
+
+.active:hover{
+    background-color: brown;
+    color: white;
+}
+
+/*****************************************************************/
+
+
+
+/* *********************** Dark Theme *************************** */
+
+
+
+.dark main{
+    background-color: #1B1F27;
+}
+
+.dark main form{
+    background-color: #181920;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.158);
+}
+
+.dark main form .light-logo{
+    display:none;
+}
+
+.dark main form .dark-logo{
+    display:block;
+}
+
+.dark main form h2::after{
+    background-color: brown;
+}
+
+.dark main form button{
+    color: white;
+    background-color: brown;
+    box-shadow: 0px 0px 5px brown;
+}
+
+.dark main form button:hover{
+    color: brown;
+    background-color: white;
+    box-shadow: 0px 0px 5px brown;
+}
+
+.dark main form input{
+    color: white;
+    background-color: #252A34;
+    box-shadow: none;
+}
+
+.dark main form input::placeholder{
+    color: white;
+}
+
+.dark main form a{
+    color: rgb(214, 53, 53);
+}
+
+.dark main form a:hover{
+    color: brown;
+}
+
+
+/* Dark Acessibilidade*/
+
+
+.dark main .acess .acess-contrast, .dark main .acess .container-acess-text .acess-text{
+    background-color: brown;
+}
+
+.dark main .acess .acess-contrast{
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.dark main .acess .acess-contrast label:hover,
+.dark main .acess .container-acess-text .acess-text:hover{
+    cursor: pointer;
+    background-color: rgba(17, 16, 16, 0.658);
+}
+
+
+
+.dark main .acess .container-acess-text{
+    background-color: brown;
+    color: white;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text{
+    background-color: brown;
+
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .text-size:hover{
+    background-color: rgba(17, 16, 16, 0.658);
+    cursor: pointer;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active{
+    background-color: white;
+    color: black;
+    border-top: 10px solid brown;
+    border-bottom: 10px solid brown;
+    border-left: 3px solid brown;
+    border-right: 3px solid brown;
+}
+
+.dark main .acess .container-acess-text .drop-acess-text .active:hover{
+    background-color: white;
+    color: black;
+}
+
+/*********************/

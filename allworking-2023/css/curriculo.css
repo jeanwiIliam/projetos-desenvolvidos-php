@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 72vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-curriculo{
+    height: 72vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(224, 224, 224);
+}
+
+.curriculo{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-curriculo{
+    background-color: rgb(207, 207, 207);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-curriculo img{
+    height: 150px;
+    width: 180px;
+}
+
+.arquivo{
+    font-size: 17px;
+
+}
+
+.area-dados{
+    height: 72vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(207, 207, 207);
+}
+
+.dados{
+    background-color: rgb(224, 224, 224);
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.dado-escolhido{
+    background-color: rgb(207, 207, 207);
+    width: 70%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.area-button{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    height: 40px;
+    width: 70px;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 102, 255);
+    transition: 0.4s;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 102, 255);
+    border: 1px solid rgb(0, 102, 255);
+}
