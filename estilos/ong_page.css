@@ -1,0 +1,185 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(55, 91, 153);
+    font-size: 14px;
+}
+
+.header{
+    display: flex;
+    background-color: #222222;
+    height: 55px;
+    width: 100%;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.menu-sup, .nav-button{
+    display: flex;
+    width: 45%;
+    align-items: center;
+}
+
+.menu-sup{
+    justify-content: flex-start;
+}
+.nav-button{
+    justify-content: flex-end;
+}
+
+.nav a{
+    padding: 7px 20px 25px;
+}
+
+.nav2{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.nav2 h3{
+    margin: 0;
+    padding: 0;
+}
+
+.nav2 a{
+    color: white;
+    background-color: #3c56ed;
+    border-radius: 15px;
+    padding: 6px 15px;
+    font-weight: 600;
+}
+
+.nav2 a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: #3c56ed;
+    font-weight: bold;
+}
+
+.ativo{
+    text-decoration: none;
+    background-color: rgb(55, 91, 153);
+    border-radius: 9px 9px 0px 0px;
+    position: relative;
+    top: 7px;
+    color: white;
+    font-weight: 600;
+}
+
+.ativo:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.inativo{
+    color: white;
+}
+
+.inativo:hover{
+    text-decoration: none;
+    color: #3c74ed;
+    cursor: pointer;
+}
+
+.container{
+    width: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1, h2{
+    width: 100%;
+    text-align: center;
+}
+
+.ongs{
+    background-color: rgb(255, 255, 255);
+    width: 310px;
+    height: 400px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.342);
+}
+
+.ongs:hover{
+    position: relative;
+    top: 1px;
+    box-shadow: 1px 8px 25px rgba(0, 0, 0, 0.507);
+}
+
+.bt-ong{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 85%;
+    background-color: #3c56ed;
+    margin: 3px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.bt-ong:hover{
+    background-color: rgb(245, 245, 245);
+    color: rgb(37,66,163);
+    text-decoration: none;
+    box-shadow: 0 0 3px rgb(37,66,163);
+    font-weight: 600;
+}
+
+.dropbtn {
+    background-color: #222222;
+    color: white;
+    padding: 13px 15px;
+    font-size: 16px;
+    border: none;
+}
+   
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #353535;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    background-color: #353535;
+}
+  
+.dropdown-content a:hover {
+    background-color: #464646;
+    color: #b0cdf8;
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 0px 0px 25px 25px;
+}
+ 
+.dropdown:hover .dropbtn {
+    background-color: #353535;
+    border-radius: 25px 25px 0px 0px;
+}
